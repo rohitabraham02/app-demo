@@ -4,7 +4,7 @@ const app = express()
 
 app.get("/", async (req, res) => {
     try {
-        const response = await axios.get("https://jsonplaceholder.typicode.com/posts")
+        const response = await axios.get("168.61.167.58:8080")
         res.json(response.data)
     }
     catch (err) {
