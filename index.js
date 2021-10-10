@@ -1,7 +1,19 @@
-var http = require('http');
+const express = require('express')
+const axios = require('axios')
+const app = express()
 
-//create a server object:
-http.createServer(function (req, res) {
-  res.write('Hello World from github!'); //write a response to the client
-  res.end(); //end the response
-}).listen(8080); //the server object listens on port 8080
+app.get("/", async (req, res) => {
+    try {
+        const response = await axios.get("https://jsonplaceholder.typicode.com/posts")
+        res.json(response.data)
+    }
+    catch (err) {
+        console.log(err)
+    }
+})
+
+app.get('*', (req, res) => {
+    res.status(500).json({ message: "error" })
+})
+
+app.listen(8080)
