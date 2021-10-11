@@ -2,6 +2,6 @@ var http = require('http');
 
 //create a server object:
 http.createServer(function (req, res) {
-  res.write('Version 1.0 env ' +process.env.environment ); //write a response to the client
+  res.write('Version 2.0 env ' +process.env.environment ); //write a response to the client
   res.end(); //end the response
 }).listen(8080); //the server object listens on port 8080
