@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'vlc-app-service'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C78E4A22980D48A489B029FD1566C0D2 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E47DBE47E5CC48D4B79263AD7B1FEC08 }}
           package: .
